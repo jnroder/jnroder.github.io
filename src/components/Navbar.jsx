@@ -6,6 +6,7 @@ const navigation = [
     { name: 'Team', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
     { name: 'Calendar', href: '#', current: false },
+    { name: 'Resume', href: '/resume', current: false },
 ]
 
 function classNames(...classes) {
@@ -87,6 +88,11 @@ export default function Example() {
                                 <MenuItem>
                                     <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                                         Settings
+                                    </a>
+                                </MenuItem>
+                                <MenuItem>
+                                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                                        Sign out
                                     </a>
                                 </MenuItem>
                                 <MenuItem>
