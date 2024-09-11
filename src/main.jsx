@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   {
     path: "/resume",
     element: <Resume />
-  }
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
