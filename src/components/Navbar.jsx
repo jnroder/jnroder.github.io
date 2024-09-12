@@ -2,11 +2,11 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
-    { name: 'Resume', href: '/resume', current: false },
+    //{ name: 'Home', href: '/', current: true },
+    //{ name: 'Team', href: '#', current: false },
+    //{ name: 'Projects', href: '#', current: false },
+    //{ name: 'Calendar', href: '#', current: false },
+    { name: 'Resume', href: '/', current: true },
 ]
 
 function classNames(...classes) {
@@ -31,16 +31,16 @@ export default function Example() {
                         <div className="flex flex-shrink-0 items-center">
                             <img
                                 alt="Your Company"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                                className="h-8 w-auto"
+                                src="/me3.jpg"
+                                className="h-8 w-auto rounded-md"
                             />
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
                                 {navigation.map((item) => (
-                                    <a
+                                    <Link
                                         key={item.name}
-                                        href={item.href}
+                                        to={item.href}
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
                                             item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
@@ -48,7 +48,7 @@ export default function Example() {
                                         )}
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
