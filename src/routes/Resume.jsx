@@ -1,10 +1,9 @@
-import Navbar from '../../components/Navbar'
+import Navbar from '../components/Navbar'
 import { PaperClipIcon } from '@heroicons/react/20/solid'
 
 export default function Resume() {
     return (
         <>
-            <Navbar/>
             <div className="page-content max-w-screen-xl">
                 <div className="px-4 sm:px-0">
                     <h1 className="text-2xl font-semibold leading-7 text-white-900 text-center">Jared Roder</h1>
@@ -68,7 +67,7 @@ export default function Resume() {
                                         <li>Completed the development and deployment of the client&#39;s first Optimizely A/B test</li>
                                     </ul>
                                 </div>
-                                
+
                                 <p className="text-lg font-bold text-white-700 mt-7 sm:mt-5">Front End Web Developer, PFSweb, LiveArea</p>
                                 <p><em>August 2014 - August 2021</em></p>
                                 <div className="sm:pl-4">
@@ -122,7 +121,7 @@ export default function Resume() {
                                 <p>Abilene Christian University</p>
                             </dd>
                         </div>
-                        
+
                         <div className="px-4 py-6 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
                             <dt className="text-lg font-bold leading-6 text-white-900">PDF Download</dt>
                             <dd className="mt-2 text-base text-white-900 sm:col-span-3 sm:mt-0">

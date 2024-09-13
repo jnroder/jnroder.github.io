@@ -4,14 +4,21 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
-import Resume from './components/pages/Resume.jsx'
+import Root from './routes/Root'
+import Resume from './routes/Resume'
 import './output.css'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Resume />
-  }
+    element: <Root />,
+    children: [
+      {
+        path: "/resume",
+        element: <Resume />
+      },
+    ]
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
