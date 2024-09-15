@@ -114,10 +114,10 @@ function MobileNavigation(props) {
         <nav className="mt-6">
           <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
             <MobileNavItem href="/about">About</MobileNavItem>
-            {/*<MobileNavItem href="/articles">Articles</MobileNavItem>*/}
-            <MobileNavItem href="/projects">Projects</MobileNavItem>
+            <MobileNavItem href="/articles">Articles</MobileNavItem>
+            {/*<MobileNavItem href="/projects">Projects</MobileNavItem>*/}
             {/*<MobileNavItem href="/speaking">Speaking</MobileNavItem>*/}
-            <MobileNavItem href="/uses">Uses</MobileNavItem>
+            <MobileNavItem href="/tools">Tools</MobileNavItem>
           </ul>
         </nav>
       </PopoverPanel>
@@ -156,7 +156,7 @@ function DesktopNavigation(props) {
         <NavItem href="/articles">Articles</NavItem>
         {/*<NavItem href="/projects">Projects</NavItem>*/}
         {/*<NavItem href="/speaking">Speaking</NavItem>*/}
-        <NavItem href="/uses">Uses</NavItem>
+        <NavItem href="/tools">Tools</NavItem>
       </ul>
     </nav>
   )
