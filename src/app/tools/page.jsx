@@ -74,7 +74,7 @@ export default function Tools() {
             <Link href="https://a.co/d/cwE9gQN" className="block font-medium text-zinc-800 dark:text-zinc-200" target="_blank">VIVOSUN 660GPH Submersible Water Pump</Link>
           </Tool>
           <Tool title="Tetra Whipser 20 Aquarium Air Pump">
-            {`This is what I use to aerate my nutrient solution tanks in my hydroponic setup. Pickud up a couple from Petsmart and they do their job well.`}
+            {`This is what I use to aerate my nutrient solution tanks in my hydroponic setup. Picked up a couple from Petsmart and they do their job well.`}
             <Link href="https://www.petsmart.com/fish/filters-and-pumps/air-and-water-pumps/tetra-whisper-aquarium-air-pump-5094982.html" className="block font-medium text-zinc-800 dark:text-zinc-200" target="_blank">Tetra Whisper 20 Aquarium Air Pump</Link>
           </Tool>
         </ToolsSection>
