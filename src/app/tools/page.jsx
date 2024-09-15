@@ -65,7 +65,9 @@ export default function Tools() {
           <Tool title="Birdies Raised Garden Beds">
             {`I chose this brand of garden bed because they are modular, allowing for different configurations, and they are made from durable, galvanized steel and won't need repairing or replacing for a long time.
             I have a couple of these in my backyard and so far I've had no issues or complaints.`}
-            <Link href="https://shop.epicgardening.com/collections/tall-birdies-metal-raised-garden-beds/products/birdies-large-raised-garden-bed-29-tall" className="block font-medium text-zinc-800 dark:text-zinc-200" target="_blank">29" Tall Birdies Large Modular Raised Garden Bed</Link>
+            <Link href="https://shop.epicgardening.com/collections/tall-birdies-metal-raised-garden-beds/products/birdies-large-raised-garden-bed-29-tall" className="block font-medium text-zinc-800 dark:text-zinc-200" target="_blank">
+              {`29" Tall Birdies Large Modular Raised Garden Bed`}
+            </Link>
           </Tool>
           <Tool title="VIVOSUN 660GPH Submersible Water Pump">
             {`Cheap and effective. I use this pump in my hydroponic setup to circulate water through the system. It's quiet and has been running for months without issue.`}
