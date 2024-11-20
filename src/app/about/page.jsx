@@ -39,7 +39,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'About',
   description:
-    'I\'m Jared, an experienced web developer, specializing in UI/UX development and ecommerce implementations.',
+    'I\'m Jared, an experienced web developer, specializing in UI/UX development and ecommerce websites.',
 }
 
 export default function About() {

@@ -251,7 +251,7 @@ export default async function Home() {
             {"Jared Roder - Web developer, family man, desperado"}
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            {"I'm Jared, an experienced web developer, specializing in UI/UX development and ecommerce implementations."}
+            {"I'm Jared, an experienced web developer, specializing in UI/UX development and ecommerce websites."}
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

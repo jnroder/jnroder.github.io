@@ -7,10 +7,10 @@ export const metadata = {
   title: {
     template: '%s - Jared Roder',
     default:
-      'Jared Roder - Web developer, family-man, domestic man-of-leisure',
+      'Jared Roder - Web developer, family-man, desperado',
   },
   description:
-    'I\'m Jared, an experienced web developer, specializing in UI/UX development and ecommerce implementations.',
+    'I\'m Jared, an experienced web developer, specializing in UI/UX development and ecommerce websites.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
