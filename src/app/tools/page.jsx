@@ -32,14 +32,14 @@ export const metadata = {
 export default function Tools() {
   return (
     <SimpleLayout
-      title="Thing I use"
-      intro="Whether I'm inside writing code or outside helping my plants grow, I'm only ever as productive as my tools. Here are the products I use in my professional work as well as my personal projects."
+      title="Things I use"
+      intro="Whether I'm at my computer ripping code or outside helping my plants grow, I'm only ever as productive as my tools allow. Here's a list of some of the things I use, both in my professional work and in my personal projects."
     >
       <div className="space-y-20">
         <ToolsSection title="Development tools">
           <Tool title="VSCode">
-            {`I use VSCode for all of my development work. It’s fast, has great extensions, and is highly customizable.
-            GitHub Copilot integration is a dream come true.`}
+            {`I use VSCode for all of my development work. It’s fast, has a large extension library, and is highly customizable.
+            GitHub Copilot integration has been a fantastic addition .`}
           </Tool>
           <Tool title="GitHub">
             {`GitHub is my version control system of choice. I recently ported a couple projects over from BitBucket. I like the UI and the community.`}
@@ -47,7 +47,7 @@ export default function Tools() {
         </ToolsSection>
         <ToolsSection title="Design">
           <Tool title="Figma">
-            {`A little heavier than AdobeXD, but with worthwhile trade-offs.VSCode integration is the main draw, but inspection capabilities also make it a great choice.`}
+            {`A little heavier than AdobeXD, but with worthwhile additions. VSCode integration is the main draw, but deep inspection capabilities also make it a great choice.`}
           </Tool>
           <Tool title="AdobeXD">
             {`My first introduction to modern web design tooling. Browser-based and specialized for web design, moving here from Photoshop was a revelation.`}
@@ -55,7 +55,7 @@ export default function Tools() {
         </ToolsSection>
         <ToolsSection title="Productivity">
           <Tool title="Notion">
-            {`Notion wants me to use it. And I do. With both desktop and mobile apps, it’s a fantastic piece of software for collecing and organizing all sorts of thoughts and information.`}
+            {`Notion wants me to use it. And I do. With both desktop and mobile apps, it’s a fantastic piece of software for collecting and organizing all of my private thoughts and information.`}
           </Tool>
           <Tool title="JIRA">
             {`JIRA has been the de facto project management tool at every company I’ve worked at. It's proven itself to be indespensible tool for realizing large-scale projects.`}
@@ -70,7 +70,7 @@ export default function Tools() {
             </Link>
           </Tool>
           <Tool title="VIVOSUN 660GPH Submersible Water Pump">
-            {`Cheap and effective. I use this pump in my hydroponic setup to circulate water through the system. It's quiet and has been running for months without issue.`}
+            {`Cheap and effective. I use this pump in my hydroponic setup to circulate nutrient solution through the system. It's quiet and has been running for months without issue.`}
             <Link href="https://a.co/d/cwE9gQN" className="block font-medium text-zinc-800 dark:text-zinc-200" target="_blank">VIVOSUN 660GPH Submersible Water Pump</Link>
           </Tool>
           <Tool title="Tetra Whipser 20 Aquarium Air Pump">
