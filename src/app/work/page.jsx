@@ -2,9 +2,8 @@
 
 import Image from 'next/image'
 import { Container } from '@/components/Container'
-import { Section } from '@/components/Section'
 import { Card } from '@/components/Card'
-import { useEffect } from 'react'
+import { Parallax } from 'react-scroll-parallax';
 
 import sfccCertImage from '@/images/certs/sfcc-certified-b2c-developer-badge.png'
 import awsCertImage from '@/images/certs/aws-certified-cloud-practitioner-badge.png'
@@ -31,16 +30,6 @@ const certifications = [
 ]
 
 function Certifications() {
-    /* only need this if using Credly embed snippet, which I'm not at the moment
-    useEffect(() => {
-        const script = document.createElement('script')
-        script.type = 'text/javascript'
-        script.async = true
-        script.src = '//cdn.credly.com/assets/utilities/embed.js'
-        document.body.appendChild(script)
-    }, [])
-    */
-
     return (
             certifications.map((certification, index) => (
                 <Card key={index} className="gap-6 bg-white dark:bg-zinc-800/90 rounded-lg shadow-lg px-4 py-2 px-sm-5 py-sm-3">
@@ -73,10 +62,100 @@ function Certifications() {
 
 export default function Work() {
     return (
-        <Container className="mt-16 sm:mt-32">
+        <Container className="mt-16 sm:mt-32">            
             <h1 className="w-full text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">Certifications</h1>
             <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
                 <Certifications />
+            </div>
+            <h1 className="w-full text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">Experience</h1>
+            <div className="page-content max-w-screen-xl">
+                <div className="mt-6 border-t border-gray-100 text-left">
+                    <dl className="divide-y divide-gray-100">
+                        <div className="px-4 py-6 sm:px-0">
+                            <div className="mt-1 text-base leading-6 text-white-700 sm:col-span-3 sm:mt-0">
+                                <Parallax translateX={['-40px', '0px']} translateY={0} opacity={['0.8', '1.6']}  scale={[0.95, 1, 'easeOutBack']} shouldAlwaysCompleteAnimation={true}>
+                                    <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
+                                        <p className="text-xl text-white-900 uppercase" style={{fontFamily: 'Neue Plak Extended Bold'}}>UnderArmour</p>
+                                        (<a href="https://underarmour.com/" style={{ fontFamily: 'Neue Plak Regular'}}>https://underarmour.com</a>)
+                                        <p><span className="font-medium">Skills</span>: JS, Sass, React.js, Webpack, Communication, Optimization, Adobe Target, Active learning</p>
+                                        <ul className="list-disc list-inside mt-3 sm:mt-0 text-lg" style={{ fontFamily: 'Neue Plak Regular' }}>
+                                            <li>Development lead for feature development for the A/B testing team on Salesforce B2C Commerce (SFRA &amp; PWA-Kit)</li>
+                                            <li>Engineered responsive, high-performance user interfaces resulting in enhanced user experience and site engagement</li>
+                                            <li>Increased A/B test delivery speed over three years, from 30 to 50 tests annually, through efficient development practices</li>
+                                        </ul>
+                                    </div>
+                                </Parallax>
+
+                                <Parallax speed={-10} translateX={['60px', '0px']} translateY={0} opacity={['0.4', '1']} shouldAlwaysCompleteAnimation={true}>
+                                    <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
+                                        <p className="text-medium font-semibold text-white-900 underline mt-4">Johnson &amp; Johnson (Neostrata, Neutrogena, Exuviance, Rogaine/Regaine)</p>
+                                        <p><span className="font-medium">Skills</span>: JS, Node.js, Sass, Communication, Performance optimization</p>
+                                        <ul className="list-disc list-inside mt-3 sm:mt-0">
+                                            <li>Developed redesigned responsive product page for <a href="http://neostrata.com/">Neostrata.com</a>, resulting in a significant increase in conversion rate</li>
+                                            <li>Refactored experiences using industry-standard techniques to improve overall site performance and UX</li>
+                                            <li>Completed the development and deployment of the client&#39;s first Optimizely A/B test</li>
+                                        </ul>
+                                    </div>
+                                </Parallax>
+                                
+                                <Parallax speed={-10} translateX={['-100px', '0px']} translateY={0} opacity={['0', '1']} shouldAlwaysCompleteAnimation={true}>
+                                    <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
+                                        <p className="text-medium font-semibold text-white-900 underline mt-4">Peter Millar (<a href="http://petermillar.com/">petermillar.com</a>)</p>
+                                        <p><span className="font-medium">Skills</span>: Dev leadership, Code review, Communication &amp; Documentation, Node.js, Sass, WCAG</p>
+                                        <ul className="list-disc list-inside mt-3 sm:mt-0">
+                                            <li>Front End Development Lead for Salesforce B2C Commerce implementation</li>
+                                            <li>Exceeded 85% compliance goal against WCAG 2.0 AA accessibility standards, verified by Google Lighthouse and Usablenet AQA</li>
+                                        </ul>
+                                    </div>
+                                </Parallax>
+
+                                <Parallax speed={-10} translateX={['100px', '0px']} translateY={0} opacity={['0', '1']} shouldAlwaysCompleteAnimation={true}>
+                                    <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
+                                        <p className="text-medium font-semibold text-white-900 underline mt-4">method (<a href="https://methodproducts.com">methodproducts.com</a>)</p>
+                                        <p><span className="font-medium">Skills</span>: Communication, Solution architecting, Stencil theming, Active learning</p>
+                                        <ul className="list-disc list-inside mt-3 sm:mt-0">
+                                            <li>Principal Front End Developer for BigCommerce implementation</li>
+                                            <li>Worked closely with client design team to ideate and engineer sleek &amp; modern storefront</li>
+                                            <li>Designed and implemented technical solution for product pages with variation attributes</li>
+                                        </ul>
+                                    </div>
+                                </Parallax>
+
+                                <Parallax speed={-10} translateX={['-100px', '0px']} translateY={0} opacity={['0', '1']} shouldAlwaysCompleteAnimation={true}>
+                                    <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
+                                        <p className="text-medium font-semibold text-white-900 underline mt-4">Lancôme (<a href="http://lancome.com/">lancome.com</a>)</p>
+                                        <p><span className="font-medium">Skills</span>: Solution design, JavaScript, CSS, Communication</p>
+                                        <ul className="list-disc list-inside mt-3 sm:mt-0">
+                                            <li>Developed custom front-end feature enabling personalized engraving for fragrance products</li>
+                                            <li>Implemented 15 responsive, interactive product promo landing pages, enhancing site engagement and promotional effectiveness</li>
+                                        </ul>
+                                    </div>
+                                </Parallax>
+                                
+                                <Parallax speed={-10} translateX={['100px', '0px']} translateY={0} opacity={['0', '1']} shouldAlwaysCompleteAnimation={true}>
+                                    <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
+                                        <p className="text-medium font-semibold text-white-900 underline mt-4">Fullbeauty Brands (<a href="https://www.fbbrands.com/">fbbrands.com</a> &amp; affiliate sites)</p>
+                                        <p><span className="font-medium">Skills</span>: Communication, Code Review, Node.js, Sass, Humility, Ownership, Performance optimization</p>
+                                        <ul className="list-disc list-inside mt-3 sm:mt-0">
+                                            <li>Brought on near the end of the project as lead front-end developer for the implementation for 7 brand sites</li>
+                                            <li>Took responsibility for significant front-end code bloat and spear-headed effort to remove thousands of lines of unnecessary code. Resulted in average of ~20kb saved per page load.</li>
+                                        </ul>
+                                    </div>
+                                </Parallax>
+
+                                <Parallax speed={-10} translateX={['-100px', '0px']} translateY={0} opacity={['0', '1']} shouldAlwaysCompleteAnimation={true}>
+                                    <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
+                                        <p className="text-medium font-semibold text-white-700 mt-4">Additional Projects</p>
+                                        <ul className="list-disc list-inside mt-3 sm:mt-0">
+                                            <li>Completed development of feature-rich product page redesign on Anastasia Beverly Hills (<a href="https://www.anastasiabeverlyhills.com/">anastasiabeverlyhills.com</a>) while colleague was out of office.</li>
+                                            <li>Maintained and enhanced front-end components for Starbucks (<a href="http://starbucks.com/">starbucks.com</a>) and Saint Laurent (<a href="http://ysl.com/us">ysl.com/us</a>)</li>
+                                        </ul>
+                                    </div>
+                                </Parallax>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
             </div>
         </Container>
     )

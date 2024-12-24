@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Neue Plak Extended Black';
+    src: url('../fonts/Neue Plak Extended Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Neue Plak Extended Bold';
+    src: url('../fonts/Neue Plak Extended Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Neue Plak Regular';
+    src: url('../fonts/Neue Plak Regular.ttf') format('truetype');
+}
