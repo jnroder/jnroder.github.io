@@ -3,10 +3,11 @@
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { Card } from '@/components/Card'
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 import sfccCertImage from '@/images/certs/sfcc-certified-b2c-developer-badge.png'
 import awsCertImage from '@/images/certs/aws-certified-cloud-practitioner-badge.png'
+import logoUA from '@/images/logos/ua-logo.png'
 
 const certifications = [
     {
@@ -73,18 +74,25 @@ export default function Work() {
                     <dl className="divide-y divide-gray-100">
                         <div className="px-4 py-6 sm:px-0">
                             <div className="mt-1 text-base leading-6 text-white-700 sm:col-span-3 sm:mt-0">
-                                <Parallax translateX={['-40px', '0px']} translateY={0} opacity={['0.8', '1.6']}  scale={[0.95, 1, 'easeOutBack']} shouldAlwaysCompleteAnimation={true}>
-                                    <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
-                                        <p className="text-xl text-white-900 uppercase" style={{fontFamily: 'Neue Plak Extended Bold'}}>UnderArmour</p>
-                                        (<a href="https://underarmour.com/" style={{ fontFamily: 'Neue Plak Regular'}}>https://underarmour.com</a>)
-                                        <p><span className="font-medium">Skills</span>: JS, Sass, React.js, Webpack, Communication, Optimization, Adobe Target, Active learning</p>
-                                        <ul className="list-disc list-inside mt-3 sm:mt-0 text-lg" style={{ fontFamily: 'Neue Plak Regular' }}>
-                                            <li>Development lead for feature development for the A/B testing team on Salesforce B2C Commerce (SFRA &amp; PWA-Kit)</li>
-                                            <li>Engineered responsive, high-performance user interfaces resulting in enhanced user experience and site engagement</li>
-                                            <li>Increased A/B test delivery speed over three years, from 30 to 50 tests annually, through efficient development practices</li>
-                                        </ul>
-                                    </div>
-                                </Parallax>
+                                <ParallaxBanner className="h-64">
+                                    <ParallaxBannerLayer scale={[0.5, 1, 'easeOutBack']} opacity={['0.8', '1']} shouldAlwaysCompleteAnimation={true}>
+                                        <Image src={logoUA} alt="UnderArmour logo" className="h-40 w-auto m-auto mt-14" />
+                                    </ParallaxBannerLayer>
+                                    <ParallaxBannerLayer translateX={0} translateY={0} opacity={['0.8', '1']} scale={[0.85, 0.95, 'easeOutBack']} shouldAlwaysCompleteAnimation={true}>
+                                        <div className="bg-white/90 dark:bg-zinc-800/80 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
+                                            <div className="flex justify-between items-start">
+                                                <p className="text-xl text-white-900 uppercase" style={{fontFamily: 'Neue Plak Extended Bold'}}>UnderArmour</p>
+                                                <span>(<a href="https://underarmour.com/" style={{ fontFamily: 'Neue Plak Regular'}}>https://underarmour.com</a>)</span>
+                                            </div>
+                                            <p className="my-2" style={{ fontFamily: 'Neue Plak Regular' }}><span className="font-medium">Skills</span>: JS | Sass | React.js | Webpack | Communication | Optimization | Adobe Target | Active learning</p>
+                                            <ul className="list-disc list-inside mt-3 sm:mt-0 text-lg" style={{ fontFamily: 'Neue Plak Regular' }}>
+                                                <li>Development lead for feature development for the A/B testing team on Salesforce B2C Commerce (SFRA &amp; PWA-Kit)</li>
+                                                <li>Engineered responsive, high-performance user interfaces resulting in enhanced user experience and site engagement</li>
+                                                <li>Increased A/B test delivery speed over three years, from 30 to 50 tests annually, through efficient development practices</li>
+                                            </ul>
+                                        </div>
+                                    </ParallaxBannerLayer>
+                                </ParallaxBanner>
 
                                 <Parallax speed={-10} translateX={['60px', '0px']} translateY={0} opacity={['0.4', '1']} shouldAlwaysCompleteAnimation={true}>
                                     <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
