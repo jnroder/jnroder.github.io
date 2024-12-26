@@ -27,3 +27,33 @@
     font-family: 'Peter Millar Body';
     src: url('../fonts/Helvetica Now Regular.woff2') format('woff2');
 }
+
+@font-face {
+    font-family: 'Method';
+    src: url('../fonts/HafferXH-method.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Method Body';
+    src: url('../fonts/Haffer-Regular.woff') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lancome';
+    src: url('../fonts/MillerDisplay-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lancome Body';
+    src: url('../fonts/HelveticaNeue.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Full Beauty Brands';
+    src: url('../fonts/Full Beauty Brands.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Full Beauty Brands Body';
+    src: url('../fonts/Full Beauty Brands Body.woff2') format('woff2');
+}

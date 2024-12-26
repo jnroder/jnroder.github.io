@@ -71,6 +71,7 @@ const workProjects = [
             }
         ],
         skills: 'JS | Sass | React.js | Typescript | Webpack | Optimization | Communication | Adobe Target',
+        platform: 'Salesforce B2C Commerce - SFRA & PWA-Kit',
         descriptionLines: [
             'Development lead for feature development for the A/B testing team on Salesforce B2C Commerce (SFRA & PWA-Kit)',
             'Engineered responsive, high-performance user interfaces resulting in enhanced user experience and site engagement',
@@ -103,6 +104,7 @@ const workProjects = [
             },
         ],
         skills: 'JS | Node.js | Sass | HTML | Figma | Communication | Performance optimization',
+        platform: 'Salesforce B2C Commerce - SFRA',
         descriptionLines: [
             'Developed redesigned responsive product page for Neostrata.com, resulting in a significant increase in conversion rate',
             'Refactored experiences using industry-standard techniques to improve overall site performance and UX',
@@ -123,7 +125,8 @@ const workProjects = [
                 href: 'http://petermillar.com',
             }
         ],
-        skills: 'Dev leadership | Code review | Communication & Documentation | Node.js | Sass | WCAG',
+        skills: 'Node.js | Sass | WCAG | Leadership | Code review | Communication | Documentation',
+        platform: 'Salesforce B2C Commerce - SFRA',
         descriptionLines: [
             'Front End Development Lead for Salesforce B2C Commerce implementation',
             'Exceeded 85% compliance goal against WCAG 2.0 AA accessibility standards, verified by Google Lighthouse and Usablenet AQA',
@@ -134,14 +137,92 @@ const workProjects = [
             color: '#071d49'
         },
         bodyFont: 'Peter Millar Body',
-    }
+    },
+    {
+        company: 'method',
+        urls: [
+            {
+                text: 'methodproducts.com',
+                href: 'https://methodproducts.com',
+            }
+        ],
+        skills: 'Communication | Solution architecting | Stencil theming | Active learning',
+        platform: 'BigCommerce',
+        descriptionLines: [
+            'Principal Front End Developer for BigCommerce implementation',
+            'Worked closely with client design team to ideate and engineer sleek & modern storefront',
+            'Designed and implemented technical solution for product pages with variation attributes',
+        ],
+        titleStyles: {
+            fontFamily: 'Method',
+            fontWeight: 'bold',
+            color: '#7800bf'
+        },
+        bodyFont: 'Method Body',
+    },
+    {
+        company: 'FullBeauty Brands',
+        urls: [
+            {
+                text: 'fbbrands.com',
+                href: 'https://www.fbbrands.com',
+            },
+            {
+                text: 'womanwithin.com',
+                href: 'https://www.womanwithin.com',
+            },
+            {
+                text: 'roamans.com',
+                href: 'https://www.roamans.com',
+            },
+            {
+                text: 'kingsize.com',
+                href: 'https://www.kingsize.com',
+            },
+        ],
+        skills: 'Node.js | Sass | Code Review | Leadership | Ownership | Performance optimization',
+        platform: 'Salesforce B2C Commerce - SFRA',
+        descriptionLines: [
+            'Led front-end development team for implementation of seven unique brand sites',
+            'Identified significant code bloat and led effort to resolve. Resulted in average of ~20kb saved per page load.',
+        ],
+        titleStyles: {
+            fontFamily: 'Full Beauty Brands Body',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            color: '#B14EB5'
+        },
+        bodyFont: 'Full Beauty Brands Body',
+    },
+    {
+        company: 'Lancôme',
+        urls: [
+            {
+                text: 'lancome.com',
+                href: 'http://lancome.com',
+            }
+        ],
+        skills: 'UX Solution Design | JS | CSS | Communication',
+        platform: 'Salesforce B2C Commerce - SiteGenesis',
+        descriptionLines: [
+            'Developed custom front-end feature enabling personalized engraving for fragrance products',
+            'Implemented 15 responsive, interactive product promo landing pages, enhancing site engagement and promotional effectiveness',
+        ],
+        titleStyles: {
+            fontFamily: 'Lancome',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            color: '#000'
+        },
+        bodyFont: 'Lancome Body',
+    },
 ]
 
 function WorkProject({project, index}) {
 
     return (
         <div key={index} className="bg-white/90 dark:bg-zinc-800/80 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 mt-6">
-            <div className="flex sm:justify-between items-start">
+            <div className="sm:flex sm:justify-between items-start">
                 <p className="text-xl text-white-900" style={project.titleStyles}>{project.company}</p>
                 <span>(
                     {
@@ -159,10 +240,11 @@ function WorkProject({project, index}) {
             <ul className="list-disc list-inside mt-3 sm:mt-0 text-lg" style={{ fontFamily: project.bodyFont }}>
                 {
                     project.descriptionLines.map((line, i) => (
-                        <li key={i}>{line}</li>
+                        <li key={i} className="pb-2">{line}</li>
                     ))
                 }
             </ul>
+            <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-4">Platform: {project.platform}</p>
         </div>
     )
 }
@@ -175,75 +257,13 @@ export default function Work() {
                 <Certifications />
             </div>
 
-            <h1 className="w-full text-2xl mt-4 font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">Experience</h1>
+            <h1 className="w-full text-2xl mt-4 font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mt-8">Experience</h1>
             <div className="page-content max-w-screen-xl">
                 {
                     workProjects.map((project, index) => (
                         <WorkProject key={index} project={project} />
                     ))
                 }
-
-                {/*
-                <div className="bg-white/90 dark:bg-zinc-800/80 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6">
-                    <div className="flex sm:justify-between items-start">
-                        <p className="text-xl text-white-900 uppercase" style={{fontFamily: 'Neue Plak Extended Bold'}}>UnderArmour</p>
-                        <span>(<a href="https://underarmour.com/" style={{ fontFamily: 'Neue Plak Regular'}}>https://underarmour.com</a>)</span>
-                    </div>
-                    <p className="my-2" style={{ fontFamily: 'Neue Plak Regular' }}><span className="font-bold">Skills</span>: JS | Sass | React.js | Typescript | Webpack | Optimization | Communication | Adobe Target</p>
-                    <ul className="list-disc list-inside mt-3 sm:mt-0 text-lg" style={{ fontFamily: 'Neue Plak Regular' }}>
-                        <li>Development lead for feature development for the A/B testing team on Salesforce B2C Commerce (SFRA &amp; PWA-Kit)</li>
-                        <li>Engineered responsive, high-performance user interfaces resulting in enhanced user experience and site engagement</li>
-                        <li>Increased A/B test delivery speed over three years, from 30 to 50 tests annually, through efficient development practices</li>
-                    </ul>
-                </div>
-                <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
-                    <div className="flex sm:justify-between items-start">
-                        <p className="text-xl font-semibold text-white-900" style={{ fontFamily: 'Johnson & Johnson', color: '#eb1700'}}>Johnson &amp; Johnson</p>
-                        <span>(<a href="https://neostrata.com">Neostrata</a>, Neutrogena, Exuviance, Rogaine/Regaine)</span>
-                    </div>
-                    <p className="my-2"><span className="font-medium">Skills</span>: JS | Node.js | Sass | Communication | Performance optimization</p>
-                    <ul className="list-disc list-inside mt-3 sm:mt-0">
-                        <li>Developed redesigned responsive product page for <a href="http://neostrata.com/">Neostrata.com</a>, resulting in a significant increase in conversion rate</li>
-                        <li>Refactored experiences using industry-standard techniques to improve overall site performance and UX</li>
-                        <li>Completed the development and deployment of the client&#39;s first Optimizely A/B test</li>
-                    </ul>
-                </div>
-                <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
-                    <p className="text-medium font-semibold text-white-900 underline mt-4">Peter Millar (<a href="http://petermillar.com/">petermillar.com</a>)</p>
-                    <p><span className="font-medium">Skills</span>: Dev leadership, Code review, Communication &amp; Documentation, Node.js, Sass, WCAG</p>
-                    <ul className="list-disc list-inside mt-3 sm:mt-0">
-                        <li>Front End Development Lead for Salesforce B2C Commerce implementation</li>
-                        <li>Exceeded 85% compliance goal against WCAG 2.0 AA accessibility standards, verified by Google Lighthouse and Usablenet AQA</li>
-                    </ul>
-                </div>
-
-                */}
-
-                <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
-                    <p className="text-medium font-semibold text-white-900 underline mt-4">method (<a href="https://methodproducts.com">methodproducts.com</a>)</p>
-                    <p><span className="font-medium">Skills</span>: Communication, Solution architecting, Stencil theming, Active learning</p>
-                    <ul className="list-disc list-inside mt-3 sm:mt-0">
-                        <li>Principal Front End Developer for BigCommerce implementation</li>
-                        <li>Worked closely with client design team to ideate and engineer sleek &amp; modern storefront</li>
-                        <li>Designed and implemented technical solution for product pages with variation attributes</li>
-                    </ul>
-                </div>
-                <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
-                    <p className="text-medium font-semibold text-white-900 underline mt-4">Lancôme (<a href="http://lancome.com/">lancome.com</a>)</p>
-                    <p><span className="font-medium">Skills</span>: Solution design, JavaScript, CSS, Communication</p>
-                    <ul className="list-disc list-inside mt-3 sm:mt-0">
-                        <li>Developed custom front-end feature enabling personalized engraving for fragrance products</li>
-                        <li>Implemented 15 responsive, interactive product promo landing pages, enhancing site engagement and promotional effectiveness</li>
-                    </ul>
-                </div>
-                <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
-                    <p className="text-medium font-semibold text-white-900 underline mt-4">Fullbeauty Brands (<a href="https://www.fbbrands.com/">fbbrands.com</a> &amp; affiliate sites)</p>
-                    <p><span className="font-medium">Skills</span>: Communication, Code Review, Node.js, Sass, Humility, Ownership, Performance optimization</p>
-                    <ul className="list-disc list-inside mt-3 sm:mt-0">
-                        <li>Brought on near the end of the project as lead front-end developer for the implementation for 7 brand sites</li>
-                        <li>Took responsibility for significant front-end code bloat and spear-headed effort to remove thousands of lines of unnecessary code. Resulted in average of ~20kb saved per page load.</li>
-                    </ul>
-                </div>
                 <div className="bg-white dark:bg-zinc-800/90 rounded-xl shadow-xl px-8 py-6 sm:px-sm-8 sm:py-sm-6 my-6">
                     <p className="text-medium font-semibold text-white-700 mt-4">Additional Projects</p>
                     <ul className="list-disc list-inside mt-3 sm:mt-0">
