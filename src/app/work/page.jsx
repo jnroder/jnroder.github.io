@@ -134,7 +134,7 @@ const workProjects = [
         titleStyles: {
             fontFamily: 'Peter Millar',
             fontWeight: 'bold',
-            color: '#071d49'
+            color: 'light-dark(#071d49, #fff)',
         },
         bodyFont: 'Peter Millar Body',
     },
@@ -212,7 +212,7 @@ const workProjects = [
             fontFamily: 'Lancome',
             fontWeight: 'bold',
             textTransform: 'uppercase',
-            color: '#000'
+            color: 'light-dark(#000, #fff)'
         },
         bodyFont: 'Lancome Body',
     },
