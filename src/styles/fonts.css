@@ -12,3 +12,18 @@
     font-family: 'Neue Plak Regular';
     src: url('../fonts/Neue Plak Regular.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Johnson & Johnson';
+    src: url('../fonts/j&j.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Peter Millar';
+    src: url('../fonts/Palatino Nova Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Peter Millar Body';
+    src: url('../fonts/Helvetica Now Regular.woff2') format('woff2');
+}
