@@ -1,0 +1,218 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Jared Roder',
+  date: '2025-01-24',
+  title: 'A Traveler\'s Guide to the Web Platform Landscape',
+  description:
+    'Welcome to my digital space.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+# A Traveler's Guide to the Web Platform Landscape
+
+## A Brief History
+
+There was a time, long ago, when the internet was a barren, featureless landscape, and where naught could be seen but one dim pair of gray-skinned giants, ignorant of their loneliness, conversing slowly in the ancient tongue. As time passed, the world grew, and the horizon stretched and broke upon the looming profiles of other figures who longed to join the palaver. At first the new members came slowly - one-by-one - their appearance much the same as the first two. But as the meeting grew, and the dialogue continued, new arrivals began to appear more frequently, presenting more diverse forms and irregular modes of speech. The giants, engrossed in their own conversation, seemed oblivious to the community growing around them, their monumental stoicism betrayed only by an occasional twinkle in their eyes as they glanced discretely around at the newcomers. Then, the light in their eyes began to fade. Their skin yellowed and cracked. Their speech slowed, faltered, and finally ceased altogether as their hulking frames slumped and fell to the ground without a sound. The conversation did not stop, however. There was no vigil of silence in respect for the dead. For why should there be? These giants had committed their entire lives to the commencement and prolonging of their communication. To stop, even for the smallest moment, would be antithetical to the way that they had established and exemplified. Instead, in accordance with the work of their masters, the chatter of the crowd rose like incense from their fallen forms, and the landscape swayed and swelled with song.
+
+Just as those ancient digital giants gave way to a vibrant ecosystem of voices and platforms, today's web landscape has evolved into an intricate web of solutions serving diverse needs. From drag-and-drop website builders to headless content management systems, each new approach represents another voice joining the conversation, another way to shape and share digital experiences. Understanding these modern platforms requires more than just comparing feature lists – it means recognizing how each one carries forward that original task of connection and communication, while adapting to the demands of our ever-changing digital world.
+
+Because the web platform landscape is constantly evolving, new solutions and terminology emerge regularly. Rather than attempting to create a comprehensive catalog of platform types (an impossible task given the pace of change), this guide focuses on understanding common patterns and approaches in web development. The categories and terms used here are meant to aid understanding rather than provide strict definitions - in practice, many platforms blur these lines or combine different approaches.
+
+Here are some common patterns we see in today's web platforms:
+
+## Managed Website Platforms
+
+These comprehensive solutions handle all aspects of creating and maintaining a professional website, from hosting and security to design and content management. By integrating these services into a single platform with predictable monthly costs, they eliminate the need to manage multiple vendors and technical components. While particularly valuable for organizations seeking simplicity, they're chosen by businesses of all sizes for their reliability, rapid deployment capabilities, and minimal maintenance overhead. Their integrated approach means features work seamlessly together, and a single support team can assist with any issues that arise.
+
+- **Wix** ($$)
+    - Visual drag-and-drop editor
+    - Extensive template library
+    - Built-in hosting and SSL
+    - Basic e-commerce features
+    - Best for: Small businesses, portfolios
+- **Shopify** ($$ - $$$)
+    - E-commerce focused platform
+    - Built-in payment processing
+    - App marketplace
+    - Inventory management
+    - Best for: Online stores, retail businesses
+- **Squarespace** ($$)
+    - Design-focused templates
+    - Integrated e-commerce
+    - Built-in analytics
+    - Mobile-optimized
+    - Best for: Creatives, restaurants, small shops
+- **Weebly** ($ - $$)
+    - Simple interface
+    - Square payment integration
+    - Basic e-commerce
+    - Mobile responsive
+    - Best for: Small businesses, basic online stores
+
+### Traditional Content Management Systems (CMS)
+
+These systems provide both content management and website display in one package but offer more flexibility than website builders.
+
+- **WordPress** ($ + hosting*)
+    - Huge plugin ecosystem
+    - Customizable themes
+    - Self-hosted option
+    - Large community
+    - Best for: Blogs, medium businesses
+- **Drupal** ($ + hosting*)
+    - Enterprise-grade security
+    - Complex content relationships
+    - Advanced user permissions
+    - Highly customizable
+    - Best for: Large organizations, government sites
+
+### Headless CMS Platforms
+
+Headless CMS platforms represent a modern approach to content management that separates content creation from content display. Unlike traditional websites where content is tightly coupled with its presentation, a headless CMS serves as a sophisticated content repository that delivers pure data through APIs. This approach enables organizations to manage content centrally while displaying it across multiple platforms and channels.
+
+What makes these platforms particularly valuable is their ability to handle complex content relationships and provide user-friendly interfaces for non-technical teams. Content experts can define and manage intricate data structures (called content models) without writing code. For example, a news organization might create models for articles, authors, topics, and media assets, all interconnected in ways that reflect their real-world relationships.
+
+### Leading Platforms
+
+**Contentful** ($$ - $$$$)
+
+- Sophisticated content modeling capabilities
+- Powerful APIs for content delivery
+- Multi-environment support for content staging
+- Advanced user permissions and workflows
+- Best suited for: Large organizations managing content across multiple channels
+
+**Sanity** ($$ - $$$)
+
+- Real-time collaborative editing
+- Highly customizable content studio
+- GROQ query language
+- Rich text handling
+- Best suited for: Developer teams needing content flexibility
+
+**Strapi** (Free*)
+
+- Open-source architecture
+- Self-hosted for data control
+- Built-in API generation (REST and GraphQL)
+- Custom content type creation
+- Best suited for: Custom applications, specific workflows
+
+### Development-Focused Platforms
+
+These platforms prioritize flexibility and programmatic control over visual builders and managed interfaces. While other platforms can certainly be customized by developers, these platforms start with code-first workflows - version control, build processes, serverless functions, etc. Instead of providing a website builder or content management interface, they offer infrastructure and tools for deploying and running custom web applications.
+
+The distinction isn't about who can build on them or what they can produce - you could deploy a WordPress site to Heroku or build a custom React app on top of Contentful. Rather, it's about the starting point and primary focus: these platforms expect you to bring your own code and provide the tools to run it effectively.
+
+- **Vercel** (Free - $$$)
+    - Optimized for Next.js and React
+    - Edge computing capabilities
+    - Automatic deployments
+    - Analytics and monitoring
+    - Best for: Modern web applications, JAMstack sites
+- **Netlify** (Free - $$$)
+    - Built-in CI/CD
+    - Edge functions
+    - Form handling
+    - Split testing
+    - Best for: Static sites, JAMstack applications
+- **Heroku** ($$ - $$$)
+    - Container-based deployments
+    - Add-on marketplace
+    - Team collaboration
+    - Auto-scaling
+    - Best for: Traditional web applications, startups
+
+## Feature Comparison Matrix
+
+| Feature | Wix | Squarespace | Weebly | WordPress | Contentful | Strapi |
+| --- | --- | --- | --- | --- | --- | --- |
+| Starting Price | $$ | $$ | $ | $* | $$$ | Free* |
+| Hosting Included | Yes | Yes | Yes | No | Yes | No |
+| Visual Editor | Yes | Yes | Yes | Yes | No | No |
+| Custom Code | Ltd | Ltd | Ltd | Full | Full | Full |
+| API Access | No | Ltd | No | Plugin | Yes | Yes |
+| E-commerce | Yes | Yes | Yes | Plugin | No** | No** |
+| Technical Curve | Low | Low | Low | Medium | High | High |
+
+\* Requires additional hosting costs
+\** Requires separate frontend implementation
+$ = Budget-friendly
+$$ = Mid-range
+$$$ = Enterprise-level
+$$$$ = Custom enterprise pricing
+
+## Making Your Choice
+
+Your choice of platform should be driven by your needs, resources, and goals rather than current trends. Here's a practical way to think about it:
+
+Choose a **Managed Platform** (like Wix, Squarespace, or Shopify) when:
+
+- You want to focus on content rather than technical maintenance
+- You need a professional site quickly
+- You want predictable monthly costs that include everything
+- Your needs are well-served by standard templates and features
+
+Consider a **Traditional CMS** (like WordPress or Drupal) when:
+
+- You need more customization than managed platforms offer
+- You have technical resources available for maintenance
+- You want access to a large ecosystem of plugins and themes
+- You're comfortable managing hosting and updates
+
+Look into a **Headless CMS** (like Contentful, Sanity, or Strapi) when:
+
+- Your content needs to appear on multiple platforms or channels
+- You have teams of content creators who need to collaborate
+- You want to separate content management from presentation
+- You need sophisticated content modeling capabilities
+
+Explore **Development-Focused Platforms** (like Vercel, Netlify, or Heroku) when:
+
+- You're building a custom web application
+- You want control over your entire technology stack
+- You need advanced features like serverless functions or edge computing
+- You have development resources and prefer code-first solutions
+
+Remember that these categories aren't rigid - many successful projects combine multiple approaches. For example, you might use a headless CMS for content management while deploying your front-end application on a development-focused platform.
+
+## A Closing Note: The Browser's Role
+
+Today's diverse ecosystem of platforms and tools is broad and complex, but I think it’s fair to say that browsers still do pretty much what they've always done: render HTML pages, apply CSS styles, and execute JavaScript. Every web platform we've discussed, no matter how sophisticated, ultimately produces these same basic ingredients:
+
+- The browser receives HTML (whether hand-coded, generated from a WordPress theme, or rendered by React)
+- It styles the content with CSS (from simple stylesheets, to pre-processed feature sets, to complex design systems)
+- It runs JavaScript to make pages interactive and manage data (from simple form validation to complex state management)
+
+Understanding this helps to put things in perspective: while platforms and tools evolve rapidly, they're all just different ways of producing and managing these basic elements. When evaluating new syntaxes or platforms, try to see past the terminology and marketing to see how they help you create and deliver these fundamental building blocks. The web is still about getting the right content to the right people - we just have more sophisticated ways of doing it.
+
+## Glossary
+
+**JAMstack**: A web architecture approach using JavaScript, APIs, and Markup instead of server-side processing. Sites are pre-built and served directly from a CDN, making them fast and secure.
+
+**SSL** (Secure Sockets Layer): Security technology that creates an encrypted connection between a web server and browser. It's what puts the padlock icon in your browser and the 'S' in HTTPS.
+
+**Staging**: A pre-production environment that mimics the live website, where changes can be tested before being published to the public site.
+
+**GROQ**: A query language (like SQL for databases) created by Sanity for retrieving content. Similar to GraphQL but designed specifically for content management.
+
+**Rich Text**: Text content that can include formatting (bold, italic), links, images, and other media. Think Microsoft Word rather than Notepad.
+
+**REST**: A standard way for web services to communicate, where data is requested and sent using standard HTTP methods. Most web APIs use REST.
+
+**GraphQL**: A more flexible alternative to REST that allows clients to request exactly the data they need in a single query. Popular in modern web development.
+
+**Next.js**: A popular framework for building React applications that can render pages on the server, statically, or in the browser.
+
+**CI/CD** (Continuous Integration/Continuous Deployment): Automated processes that help teams integrate code changes reliably and deploy updates frequently.
+
+**Edge Computing**: Running code and serving content from data centers close to users instead of from a central location, making websites faster.
+
+**Container**: A package of code and dependencies that can run consistently across different computing environments. Think of it as a complete, portable mini-computer for running your application.
